@@ -19,6 +19,6 @@ test('get started link', async ({ page }) => {
 });
 
 test('Amazon', async ({ page }) => {
-  await page.goto('https://www.amazon.in/');
+  await page.goto('https://www.amazon.in/'); 
 
 });
