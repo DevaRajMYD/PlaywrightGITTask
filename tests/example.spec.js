@@ -18,6 +18,9 @@ test('get started link', async ({ page }) => {
   await expect(page.getByRole('heading', { name: 'Installation' })).toBeVisible();
 });
 
+test('Amazon', async ({ page }) => {
+  await page.goto('https://www.amazon.in/'); 
+})
 
 test('Flipkart', async ({ page }) => {
   await page.goto('https://www.flipkart.com/'); 
