@@ -20,6 +20,6 @@ test('get started link', async ({ page }) => {
 
 
 test('Flipkart', async ({ page }) => {
-  await page.goto('https://www.flipkart.com/');
+  await page.goto('https://www.flipkart.com/'); 
 
 });
