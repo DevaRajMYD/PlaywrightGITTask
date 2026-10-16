@@ -1,0 +1,197 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: WindowHandling.spec.js >> Multi Window Handling
+- Location: tests\WindowHandling.spec.js:43:5
+
+# Error details
+
+```
+Test timeout of 30000ms exceeded.
+```
+
+# Page snapshot
+
+```yaml
+- generic [aria-hidden] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e5]:
+      - link [ref=e7] [cursor=pointer]:
+        - /url: http://www.automationtesting.in
+      - heading [level=1] [ref=e10]: Automation Demo Site
+    - navigation [ref=e11]:
+      - list [ref=e14]:
+        - listitem [ref=e15]:
+          - link [ref=e16] [cursor=pointer]:
+            - /url: Index.html
+            - text: Home
+        - listitem [ref=e17]:
+          - link [ref=e18] [cursor=pointer]:
+            - /url: Register.html
+            - text: Register
+        - listitem [ref=e19]:
+          - link [ref=e20] [cursor=pointer]:
+            - /url: WebTable.html
+            - text: WebTable
+        - listitem [ref=e21]:
+          - link [ref=e22] [cursor=pointer]:
+            - /url: SwitchTo.html
+            - text: SwitchTo
+          - generic [ref=e23]: 
+        - listitem [ref=e24]:
+          - link [ref=e25] [cursor=pointer]:
+            - /url: Widgets.html
+            - text: Widgets
+          - generic [ref=e26]: 
+        - listitem [ref=e27]:
+          - link [ref=e28] [cursor=pointer]:
+            - /url: Interactions.html
+            - text: Interactions
+          - generic [ref=e29]: 
+        - listitem [ref=e30]:
+          - link [ref=e31] [cursor=pointer]:
+            - /url: SwitchTo.html
+            - text: Video
+          - generic [ref=e32]: 
+        - listitem [ref=e33]:
+          - link [ref=e34] [cursor=pointer]:
+            - /url: WYSIWYG.html
+            - text: WYSIWYG
+          - generic [ref=e35]: 
+        - listitem [ref=e36]:
+          - link [ref=e37] [cursor=pointer]:
+            - /url: "#"
+            - text: More
+          - generic [ref=e38]: 
+        - listitem [ref=e39]:
+          - link [ref=e40] [cursor=pointer]:
+            - /url: http://practice.automationtesting.in/
+            - text: Practice Site
+  - generic [ref=e44]:
+    - list [ref=e46]:
+      - listitem [ref=e47]:
+        - link [ref=e48] [cursor=pointer]:
+          - /url: "#Tabbed"
+          - text: Open New Tabbed Windows
+      - listitem [ref=e49]:
+        - link [ref=e50] [cursor=pointer]:
+          - /url: "#Seperate"
+          - text: Open New Seperate Windows
+      - listitem [ref=e51]:
+        - link [expanded] [ref=e52]:
+          - /url: "#Multiple"
+          - text: Open Seperate Multiple Windows
+    - generic [ref=e53]:
+      - paragraph [ref=e54]: Click the button to open multiple windows
+      - button [ref=e55] [cursor=pointer]: click
+  - generic [ref=e57]:
+    - insertion [ref=e60]:
+      - generic [ref=e63]:
+        - heading [level=2] [ref=e65]: Discover more
+        - link [ref=e66] [cursor=pointer]:
+          - generic [ref=e67]: QA Consulting Services
+        - link [ref=e71] [cursor=pointer]:
+          - generic [ref=e72]: Compare Browsers
+        - link [ref=e76] [cursor=pointer]:
+          - generic [ref=e77]: Compare Broadband
+        - link [ref=e81] [cursor=pointer]:
+          - generic [ref=e82]: Build a Website
+        - link [ref=e86] [cursor=pointer]:
+          - generic [ref=e87]: Test Keyboards
+        - link [ref=e91] [cursor=pointer]:
+          - generic [ref=e92]: Cross-Browser Testing
+        - link [ref=e96] [cursor=pointer]:
+          - generic [ref=e97]: Software Development Lifecycle
+        - link [ref=e101] [cursor=pointer]:
+          - generic [ref=e102]: Browse Reference
+    - insertion [ref=e108]:
+      - iframe [ref=e110]:
+        - generic [ref=f3e1]:
+          - generic [ref=f3e6]:
+            - generic [ref=f3e7]:
+              - generic [ref=f3e8]:
+                - link [ref=f3e9] [cursor=pointer]:
+                  - /url: https://www.googleadservices.com/pagead/aclk?sa=L&ai=Cb_qulhXSauPhCLed1d8P5OzhsQGCgNuhigH76L_IxRb4_r7Cjw4QASCPvrcvYOWS6IPYDqABwpGtxD7IAQGpAlKC-jNtnEY-qAMByAPLBKoE-gFP0MG-VWkvbLJnH-3212vKEa8J4HekSF-l2VSfxTtJQNsDDbOhKKqG2CbdVtwY-DiEHF8wjwguM1PXXI0qZOH3no65kpH5MkI7A8NEc3dnhIrXtojeVCN2Um2v25X5-zhtH423rtGs1aZYKPOz55hl11pth4eK3EsEbjXdkLhYpQooX8LLrO5tJlG8XGrDAUAHVfbN6jjrMZYIyFBEuHD4DboMybEY0SNzak6H5op-x7YnB3tvarUzKKU8YrUx5fMbRQtvPNcw2oH0B-_vue6sZX8hL19mEj-X-Wp-Ot8n_boZLGyI3OE1XVDlS40NZJrXfAdliEKPpWQYwAT81IrQ8QWIBfru0MVaoAYugAfCyf2jGagHp8yxAqgH4tixAqgHpr4bqAfMzrECqAfz0RuoB5bYG6gHqpuxAqgH_uixAqgHjs4bqAeT2BuoB_DgG6gH7paxAqgH_p6xAqgHr76xAqgHn-GxAqgHpuuxAqgH1ckbqAfZtrECqAeaBqgH_56xAqgH35-xAqgH-MKxAqgH-8KxAtgHAdIIMwiAYRABGJ8DMgiKgoCAgICACDoPgECAwICAgICogAKog4AYSL39wTpYp9iGj8K-lwNgAbEJYpL9HS0uYc6ACgGYCwHICwGiDA8qCgoIjt-xApXisQKQAQGqDQJJTsgNAeoNEwjqjYmPwr6XAxW3TvUFHWR2OBbwDQKIDgnYEwOIFAHQFQGYFgHKFgIKAPgWAYAXAbIXEBgBKgo2NjM4NjMzNTQ3UAa6FwI4AaoYFwkAAAAAAD73QBIKNjYzODYzMzU0NxgBshgJEgLBXBguIgEA0BgBwhkCCAE&ae=1&gclid=EAIaIQobChMI44SJj8K-lwMVt071BR1kdjgWEAEYASAAEgIK_fD_BwE&num=1&cid=CAQSoAIAQM4h3El23L03CL3oj9nz7Kl7RXS_Qd6nFyeDYQYouGXVTAOyBQXUF7Ljg_hu76Ou9vid90QzdhdMv46KFD5sn2RztaYAqy-0n7p9tVVA4yLTnT5HxrUaiUKTBm7oZbIUTwANhG2oIg-akqm59K63Qt06xeqIBrAo9EFOIshAA1gTDTi8garDwCjKEPEo2U5KNvzwLi3S7-KnFoY-sjSGNeUMMWGaR4OwQ9ICo3mdTGmiAwGLCO4DESBD7kP_UZf1g6Q134Gl8QXF6PgTKSY3pk3mQTVIjr7HQvshIZ-hJUOpfGw4rtRBkOKGLqG6fPRyRa9tC4px6SsPQzgKS-ua91raRQWGLJgNwh_54NFTxvSzercQNVwgA76jhDjXY2MYAQ&sig=AOD64_29-LCDgEtxnNwK-97I4inofnjISw&rf=1&nb=19&adurl=https://rbikehtahai.rbi.org.in/rbi-settlement-of-deceased-claims.html%3Fgad_source%3D5%26gad_campaignid%3D24305219450%26gclid%3DEAIaIQobChMI44SJj8K-lwMVt071BR1kdjgWEAEYASAAEgIK_fD_BwE
+                - link "RESERVE BANK OF INDIA" [ref=f3e12] [cursor=pointer]:
+                  - /url: https://www.googleadservices.com/pagead/aclk?sa=L&ai=Cb_qulhXSauPhCLed1d8P5OzhsQGCgNuhigH76L_IxRb4_r7Cjw4QASCPvrcvYOWS6IPYDqABwpGtxD7IAQGpAlKC-jNtnEY-qAMByAPLBKoE-gFP0MG-VWkvbLJnH-3212vKEa8J4HekSF-l2VSfxTtJQNsDDbOhKKqG2CbdVtwY-DiEHF8wjwguM1PXXI0qZOH3no65kpH5MkI7A8NEc3dnhIrXtojeVCN2Um2v25X5-zhtH423rtGs1aZYKPOz55hl11pth4eK3EsEbjXdkLhYpQooX8LLrO5tJlG8XGrDAUAHVfbN6jjrMZYIyFBEuHD4DboMybEY0SNzak6H5op-x7YnB3tvarUzKKU8YrUx5fMbRQtvPNcw2oH0B-_vue6sZX8hL19mEj-X-Wp-Ot8n_boZLGyI3OE1XVDlS40NZJrXfAdliEKPpWQYwAT81IrQ8QWIBfru0MVaoAYugAfCyf2jGagHp8yxAqgH4tixAqgHpr4bqAfMzrECqAfz0RuoB5bYG6gHqpuxAqgH_uixAqgHjs4bqAeT2BuoB_DgG6gH7paxAqgH_p6xAqgHr76xAqgHn-GxAqgHpuuxAqgH1ckbqAfZtrECqAeaBqgH_56xAqgH35-xAqgH-MKxAqgH-8KxAtgHAdIIMwiAYRABGJ8DMgiKgoCAgICACDoPgECAwICAgICogAKog4AYSL39wTpYp9iGj8K-lwNgAbEJYpL9HS0uYc6ACgGYCwHICwGiDA8qCgoIjt-xApXisQKQAQGqDQJJTsgNAeoNEwjqjYmPwr6XAxW3TvUFHWR2OBbwDQKIDgnYEwOIFAHQFQGYFgHKFgIKAPgWAYAXAbIXEBgBKgo2NjM4NjMzNTQ3UAa6FwI4AaoYFwkAAAAAAD73QBIKNjYzODYzMzU0NxgBshgJEgLBXBguIgEA0BgBwhkCCAE&ae=1&gclid=EAIaIQobChMI44SJj8K-lwMVt071BR1kdjgWEAEYASAAEgIK_fD_BwE&num=1&cid=CAQSoAIAQM4h3El23L03CL3oj9nz7Kl7RXS_Qd6nFyeDYQYouGXVTAOyBQXUF7Ljg_hu76Ou9vid90QzdhdMv46KFD5sn2RztaYAqy-0n7p9tVVA4yLTnT5HxrUaiUKTBm7oZbIUTwANhG2oIg-akqm59K63Qt06xeqIBrAo9EFOIshAA1gTDTi8garDwCjKEPEo2U5KNvzwLi3S7-KnFoY-sjSGNeUMMWGaR4OwQ9ICo3mdTGmiAwGLCO4DESBD7kP_UZf1g6Q134Gl8QXF6PgTKSY3pk3mQTVIjr7HQvshIZ-hJUOpfGw4rtRBkOKGLqG6fPRyRa9tC4px6SsPQzgKS-ua91raRQWGLJgNwh_54NFTxvSzercQNVwgA76jhDjXY2MYAQ&sig=AOD64_29-LCDgEtxnNwK-97I4inofnjISw&rf=1&nb=1&adurl=https://rbikehtahai.rbi.org.in/rbi-settlement-of-deceased-claims.html%3Fgad_source%3D5%26gad_campaignid%3D24305219450%26gclid%3DEAIaIQobChMI44SJj8K-lwMVt071BR1kdjgWEAEYASAAEgIK_fD_BwE
+              - link "இறந்தவரின் கோரிக்கை தீர்வு" [ref=f3e14] [cursor=pointer]:
+                - /url: https://www.googleadservices.com/pagead/aclk?sa=L&ai=Cb_qulhXSauPhCLed1d8P5OzhsQGCgNuhigH76L_IxRb4_r7Cjw4QASCPvrcvYOWS6IPYDqABwpGtxD7IAQGpAlKC-jNtnEY-qAMByAPLBKoE-gFP0MG-VWkvbLJnH-3212vKEa8J4HekSF-l2VSfxTtJQNsDDbOhKKqG2CbdVtwY-DiEHF8wjwguM1PXXI0qZOH3no65kpH5MkI7A8NEc3dnhIrXtojeVCN2Um2v25X5-zhtH423rtGs1aZYKPOz55hl11pth4eK3EsEbjXdkLhYpQooX8LLrO5tJlG8XGrDAUAHVfbN6jjrMZYIyFBEuHD4DboMybEY0SNzak6H5op-x7YnB3tvarUzKKU8YrUx5fMbRQtvPNcw2oH0B-_vue6sZX8hL19mEj-X-Wp-Ot8n_boZLGyI3OE1XVDlS40NZJrXfAdliEKPpWQYwAT81IrQ8QWIBfru0MVaoAYugAfCyf2jGagHp8yxAqgH4tixAqgHpr4bqAfMzrECqAfz0RuoB5bYG6gHqpuxAqgH_uixAqgHjs4bqAeT2BuoB_DgG6gH7paxAqgH_p6xAqgHr76xAqgHn-GxAqgHpuuxAqgH1ckbqAfZtrECqAeaBqgH_56xAqgH35-xAqgH-MKxAqgH-8KxAtgHAdIIMwiAYRABGJ8DMgiKgoCAgICACDoPgECAwICAgICogAKog4AYSL39wTpYp9iGj8K-lwNgAbEJYpL9HS0uYc6ACgGYCwHICwGiDA8qCgoIjt-xApXisQKQAQGqDQJJTsgNAeoNEwjqjYmPwr6XAxW3TvUFHWR2OBbwDQKIDgnYEwOIFAHQFQGYFgHKFgIKAPgWAYAXAbIXEBgBKgo2NjM4NjMzNTQ3UAa6FwI4AaoYFwkAAAAAAD73QBIKNjYzODYzMzU0NxgBshgJEgLBXBguIgEA0BgBwhkCCAE&ae=1&gclid=EAIaIQobChMI44SJj8K-lwMVt071BR1kdjgWEAEYASAAEgIK_fD_BwE&num=1&cid=CAQSoAIAQM4h3El23L03CL3oj9nz7Kl7RXS_Qd6nFyeDYQYouGXVTAOyBQXUF7Ljg_hu76Ou9vid90QzdhdMv46KFD5sn2RztaYAqy-0n7p9tVVA4yLTnT5HxrUaiUKTBm7oZbIUTwANhG2oIg-akqm59K63Qt06xeqIBrAo9EFOIshAA1gTDTi8garDwCjKEPEo2U5KNvzwLi3S7-KnFoY-sjSGNeUMMWGaR4OwQ9ICo3mdTGmiAwGLCO4DESBD7kP_UZf1g6Q134Gl8QXF6PgTKSY3pk3mQTVIjr7HQvshIZ-hJUOpfGw4rtRBkOKGLqG6fPRyRa9tC4px6SsPQzgKS-ua91raRQWGLJgNwh_54NFTxvSzercQNVwgA76jhDjXY2MYAQ&sig=AOD64_29-LCDgEtxnNwK-97I4inofnjISw&rf=1&nb=0&adurl=https://rbikehtahai.rbi.org.in/rbi-settlement-of-deceased-claims.html%3Fgad_source%3D5%26gad_campaignid%3D24305219450%26gclid%3DEAIaIQobChMI44SJj8K-lwMVt071BR1kdjgWEAEYASAAEgIK_fD_BwE
+                - text: இறந்தவரின்கோரிக்கைதீர்வு
+              - link "வங்கி/வெப்சைட்-ல் க்ளைம் தேவைகளை சரிபார்த்து ஆவணங்களை சமர்ப்பிக்கவும்" [ref=f3e16] [cursor=pointer]:
+                - /url: https://www.googleadservices.com/pagead/aclk?sa=L&ai=Cb_qulhXSauPhCLed1d8P5OzhsQGCgNuhigH76L_IxRb4_r7Cjw4QASCPvrcvYOWS6IPYDqABwpGtxD7IAQGpAlKC-jNtnEY-qAMByAPLBKoE-gFP0MG-VWkvbLJnH-3212vKEa8J4HekSF-l2VSfxTtJQNsDDbOhKKqG2CbdVtwY-DiEHF8wjwguM1PXXI0qZOH3no65kpH5MkI7A8NEc3dnhIrXtojeVCN2Um2v25X5-zhtH423rtGs1aZYKPOz55hl11pth4eK3EsEbjXdkLhYpQooX8LLrO5tJlG8XGrDAUAHVfbN6jjrMZYIyFBEuHD4DboMybEY0SNzak6H5op-x7YnB3tvarUzKKU8YrUx5fMbRQtvPNcw2oH0B-_vue6sZX8hL19mEj-X-Wp-Ot8n_boZLGyI3OE1XVDlS40NZJrXfAdliEKPpWQYwAT81IrQ8QWIBfru0MVaoAYugAfCyf2jGagHp8yxAqgH4tixAqgHpr4bqAfMzrECqAfz0RuoB5bYG6gHqpuxAqgH_uixAqgHjs4bqAeT2BuoB_DgG6gH7paxAqgH_p6xAqgHr76xAqgHn-GxAqgHpuuxAqgH1ckbqAfZtrECqAeaBqgH_56xAqgH35-xAqgH-MKxAqgH-8KxAtgHAdIIMwiAYRABGJ8DMgiKgoCAgICACDoPgECAwICAgICogAKog4AYSL39wTpYp9iGj8K-lwNgAbEJYpL9HS0uYc6ACgGYCwHICwGiDA8qCgoIjt-xApXisQKQAQGqDQJJTsgNAeoNEwjqjYmPwr6XAxW3TvUFHWR2OBbwDQKIDgnYEwOIFAHQFQGYFgHKFgIKAPgWAYAXAbIXEBgBKgo2NjM4NjMzNTQ3UAa6FwI4AaoYFwkAAAAAAD73QBIKNjYzODYzMzU0NxgBshgJEgLBXBguIgEA0BgBwhkCCAE&ae=1&gclid=EAIaIQobChMI44SJj8K-lwMVt071BR1kdjgWEAEYASAAEgIK_fD_BwE&num=1&cid=CAQSoAIAQM4h3El23L03CL3oj9nz7Kl7RXS_Qd6nFyeDYQYouGXVTAOyBQXUF7Ljg_hu76Ou9vid90QzdhdMv46KFD5sn2RztaYAqy-0n7p9tVVA4yLTnT5HxrUaiUKTBm7oZbIUTwANhG2oIg-akqm59K63Qt06xeqIBrAo9EFOIshAA1gTDTi8garDwCjKEPEo2U5KNvzwLi3S7-KnFoY-sjSGNeUMMWGaR4OwQ9ICo3mdTGmiAwGLCO4DESBD7kP_UZf1g6Q134Gl8QXF6PgTKSY3pk3mQTVIjr7HQvshIZ-hJUOpfGw4rtRBkOKGLqG6fPRyRa9tC4px6SsPQzgKS-ua91raRQWGLJgNwh_54NFTxvSzercQNVwgA76jhDjXY2MYAQ&sig=AOD64_29-LCDgEtxnNwK-97I4inofnjISw&rf=1&nb=7&adurl=https://rbikehtahai.rbi.org.in/rbi-settlement-of-deceased-claims.html%3Fgad_source%3D5%26gad_campaignid%3D24305219450%26gclid%3DEAIaIQobChMI44SJj8K-lwMVt071BR1kdjgWEAEYASAAEgIK_fD_BwE
+                - text: வங்கி/வெப்சைட்-ல்க்ளைம் தேவைகளைசரிபார்த்து ஆவணங்களைசமர்ப்பிக்கவும்
+            - link [ref=f3e18] [cursor=pointer]:
+              - /url: https://www.googleadservices.com/pagead/aclk?sa=L&ai=Cb_qulhXSauPhCLed1d8P5OzhsQGCgNuhigH76L_IxRb4_r7Cjw4QASCPvrcvYOWS6IPYDqABwpGtxD7IAQGpAlKC-jNtnEY-qAMByAPLBKoE-gFP0MG-VWkvbLJnH-3212vKEa8J4HekSF-l2VSfxTtJQNsDDbOhKKqG2CbdVtwY-DiEHF8wjwguM1PXXI0qZOH3no65kpH5MkI7A8NEc3dnhIrXtojeVCN2Um2v25X5-zhtH423rtGs1aZYKPOz55hl11pth4eK3EsEbjXdkLhYpQooX8LLrO5tJlG8XGrDAUAHVfbN6jjrMZYIyFBEuHD4DboMybEY0SNzak6H5op-x7YnB3tvarUzKKU8YrUx5fMbRQtvPNcw2oH0B-_vue6sZX8hL19mEj-X-Wp-Ot8n_boZLGyI3OE1XVDlS40NZJrXfAdliEKPpWQYwAT81IrQ8QWIBfru0MVaoAYugAfCyf2jGagHp8yxAqgH4tixAqgHpr4bqAfMzrECqAfz0RuoB5bYG6gHqpuxAqgH_uixAqgHjs4bqAeT2BuoB_DgG6gH7paxAqgH_p6xAqgHr76xAqgHn-GxAqgHpuuxAqgH1ckbqAfZtrECqAeaBqgH_56xAqgH35-xAqgH-MKxAqgH-8KxAtgHAdIIMwiAYRABGJ8DMgiKgoCAgICACDoPgECAwICAgICogAKog4AYSL39wTpYp9iGj8K-lwNgAbEJYpL9HS0uYc6ACgGYCwHICwGiDA8qCgoIjt-xApXisQKQAQGqDQJJTsgNAeoNEwjqjYmPwr6XAxW3TvUFHWR2OBbwDQKIDgnYEwOIFAHQFQGYFgHKFgIKAPgWAYAXAbIXEBgBKgo2NjM4NjMzNTQ3UAa6FwI4AaoYFwkAAAAAAD73QBIKNjYzODYzMzU0NxgBshgJEgLBXBguIgEA0BgBwhkCCAE&ae=1&gclid=EAIaIQobChMI44SJj8K-lwMVt071BR1kdjgWEAEYASAAEgIK_fD_BwE&num=1&cid=CAQSoAIAQM4h3El23L03CL3oj9nz7Kl7RXS_Qd6nFyeDYQYouGXVTAOyBQXUF7Ljg_hu76Ou9vid90QzdhdMv46KFD5sn2RztaYAqy-0n7p9tVVA4yLTnT5HxrUaiUKTBm7oZbIUTwANhG2oIg-akqm59K63Qt06xeqIBrAo9EFOIshAA1gTDTi8garDwCjKEPEo2U5KNvzwLi3S7-KnFoY-sjSGNeUMMWGaR4OwQ9ICo3mdTGmiAwGLCO4DESBD7kP_UZf1g6Q134Gl8QXF6PgTKSY3pk3mQTVIjr7HQvshIZ-hJUOpfGw4rtRBkOKGLqG6fPRyRa9tC4px6SsPQzgKS-ua91raRQWGLJgNwh_54NFTxvSzercQNVwgA76jhDjXY2MYAQ&sig=AOD64_29-LCDgEtxnNwK-97I4inofnjISw&rf=1&nb=9&adurl=https://rbikehtahai.rbi.org.in/rbi-settlement-of-deceased-claims.html%3Fgad_source%3D5%26gad_campaignid%3D24305219450%26gclid%3DEAIaIQobChMI44SJj8K-lwMVt071BR1kdjgWEAEYASAAEgIK_fD_BwE
+            - link "Learn More" [ref=f3e21] [cursor=pointer]:
+              - /url: https://www.googleadservices.com/pagead/aclk?sa=L&ai=Cb_qulhXSauPhCLed1d8P5OzhsQGCgNuhigH76L_IxRb4_r7Cjw4QASCPvrcvYOWS6IPYDqABwpGtxD7IAQGpAlKC-jNtnEY-qAMByAPLBKoE-gFP0MG-VWkvbLJnH-3212vKEa8J4HekSF-l2VSfxTtJQNsDDbOhKKqG2CbdVtwY-DiEHF8wjwguM1PXXI0qZOH3no65kpH5MkI7A8NEc3dnhIrXtojeVCN2Um2v25X5-zhtH423rtGs1aZYKPOz55hl11pth4eK3EsEbjXdkLhYpQooX8LLrO5tJlG8XGrDAUAHVfbN6jjrMZYIyFBEuHD4DboMybEY0SNzak6H5op-x7YnB3tvarUzKKU8YrUx5fMbRQtvPNcw2oH0B-_vue6sZX8hL19mEj-X-Wp-Ot8n_boZLGyI3OE1XVDlS40NZJrXfAdliEKPpWQYwAT81IrQ8QWIBfru0MVaoAYugAfCyf2jGagHp8yxAqgH4tixAqgHpr4bqAfMzrECqAfz0RuoB5bYG6gHqpuxAqgH_uixAqgHjs4bqAeT2BuoB_DgG6gH7paxAqgH_p6xAqgHr76xAqgHn-GxAqgHpuuxAqgH1ckbqAfZtrECqAeaBqgH_56xAqgH35-xAqgH-MKxAqgH-8KxAtgHAdIIMwiAYRABGJ8DMgiKgoCAgICACDoPgECAwICAgICogAKog4AYSL39wTpYp9iGj8K-lwNgAbEJYpL9HS0uYc6ACgGYCwHICwGiDA8qCgoIjt-xApXisQKQAQGqDQJJTsgNAeoNEwjqjYmPwr6XAxW3TvUFHWR2OBbwDQKIDgnYEwOIFAHQFQGYFgHKFgIKAPgWAYAXAbIXEBgBKgo2NjM4NjMzNTQ3UAa6FwI4AaoYFwkAAAAAAD73QBIKNjYzODYzMzU0NxgBshgJEgLBXBguIgEA0BgBwhkCCAE&ae=1&gclid=EAIaIQobChMI44SJj8K-lwMVt071BR1kdjgWEAEYASAAEgIK_fD_BwE&num=1&cid=CAQSoAIAQM4h3El23L03CL3oj9nz7Kl7RXS_Qd6nFyeDYQYouGXVTAOyBQXUF7Ljg_hu76Ou9vid90QzdhdMv46KFD5sn2RztaYAqy-0n7p9tVVA4yLTnT5HxrUaiUKTBm7oZbIUTwANhG2oIg-akqm59K63Qt06xeqIBrAo9EFOIshAA1gTDTi8garDwCjKEPEo2U5KNvzwLi3S7-KnFoY-sjSGNeUMMWGaR4OwQ9ICo3mdTGmiAwGLCO4DESBD7kP_UZf1g6Q134Gl8QXF6PgTKSY3pk3mQTVIjr7HQvshIZ-hJUOpfGw4rtRBkOKGLqG6fPRyRa9tC4px6SsPQzgKS-ua91raRQWGLJgNwh_54NFTxvSzercQNVwgA76jhDjXY2MYAQ&sig=AOD64_29-LCDgEtxnNwK-97I4inofnjISw&rf=1&nb=8&adurl=https://rbikehtahai.rbi.org.in/rbi-settlement-of-deceased-claims.html%3Fgad_source%3D5%26gad_campaignid%3D24305219450%26gclid%3DEAIaIQobChMI44SJj8K-lwMVt071BR1kdjgWEAEYASAAEgIK_fD_BwE
+          - generic [ref=f3e29] [cursor=pointer]
+          - button [ref=f3e34] [cursor=pointer]
+          - iframe
+    - insertion [ref=e113]:
+      - generic [ref=e116]:
+        - heading [level=2] [ref=e118]: Discover more
+        - link [ref=e119] [cursor=pointer]:
+          - generic [ref=e120]: Software Testing Tools
+        - link [ref=e124] [cursor=pointer]:
+          - generic [ref=e125]: Automation Training Courses
+        - link [ref=e129] [cursor=pointer]:
+          - generic [ref=e130]: Selenium WebDriver Tutorials
+        - link [ref=e134] [cursor=pointer]:
+          - generic [ref=e135]: Web Application Testing
+        - link [ref=e139] [cursor=pointer]:
+          - generic [ref=e140]: Robotic Process Automation
+        - link [ref=e144] [cursor=pointer]:
+          - generic [ref=e145]: Source Robotics
+        - link [ref=e149] [cursor=pointer]:
+          - generic [ref=e150]: Try Dev Tools
+        - link [ref=e154] [cursor=pointer]:
+          - generic [ref=e155]: Try Cloud Tools
+    - insertion [ref=e161]:
+      - generic [ref=e164]:
+        - heading [level=2] [ref=e166]: Discover more
+        - link [ref=e167] [cursor=pointer]:
+          - generic [ref=e168]: Learn a Language
+        - link [ref=e172] [cursor=pointer]:
+          - generic [ref=e173]: Track Pregnancy
+        - link [ref=e177] [cursor=pointer]:
+          - generic [ref=e178]: Software Testing Tools
+        - link [ref=e182] [cursor=pointer]:
+          - generic [ref=e183]: Automation Training Courses
+        - link [ref=e187] [cursor=pointer]:
+          - generic [ref=e188]: Selenium WebDriver Tutorials
+        - link [ref=e192] [cursor=pointer]:
+          - generic [ref=e193]: Web Application Testing
+        - link [ref=e197] [cursor=pointer]:
+          - generic [ref=e198]: Robotic Process Automation
+        - link [ref=e202] [cursor=pointer]:
+          - generic [ref=e203]: Source Robotics
+    - contentinfo [ref=e208]:
+      - generic [ref=e210]:
+        - generic [ref=e211]:
+          - text: "\"@ 2016\""
+          - link [ref=e212] [cursor=pointer]:
+            - /url: "#"
+            - text: Automation Testing
+          - text: "\"All Rights Reserved.\""
+        - generic [ref=e213]:
+          - link [ref=e214] [cursor=pointer]:
+            - /url: https://www.facebook.com/automationtesting2016/
+            - generic [ref=e215]: 
+          - link [ref=e216] [cursor=pointer]:
+            - /url: https://twitter.com/krishnasakinala
+            - generic [ref=e217]: 
+          - link [ref=e218] [cursor=pointer]:
+            - /url: https://www.linkedin.com/nhome/?trk=hb_signin
+            - generic [ref=e219]: 
+          - link [ref=e220] [cursor=pointer]:
+            - /url: https://plus.google.com/105286300926085335367
+            - generic [ref=e221]: 
+          - link [ref=e222] [cursor=pointer]:
+            - /url: https://www.youtube.com/channel/UCmQRa3pWM9zsB474URz8ESg
+            - generic [ref=e223]: 
+```
