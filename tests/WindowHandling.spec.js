@@ -4,7 +4,7 @@ import {test, expect} from "@playwright/test"
 
 //Single Frame
 
-test ('WindowHandling', async ({page}) => { 
+test ('WindowHandling', async ({page}) => {  
 
 await page.goto ("https://demo.automationtesting.in");                               // ------> Home Page URL
 
