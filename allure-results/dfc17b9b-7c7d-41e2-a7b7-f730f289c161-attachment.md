@@ -1,0 +1,105 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: Locators.spec.js >> LoginLogoutCheckOrangeHRM
+- Location: tests\Locators.spec.js:22:5
+
+# Error details
+
+```
+Test timeout of 30000ms exceeded.
+```
+
+```
+Error: page.goto: Test timeout of 30000ms exceeded.
+Call log:
+  - navigating to "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login", waiting until "load"
+
+```
+
+# Test source
+
+```ts
+  1  | import {test, expect} from '@playwright/test';
+  2  | 
+  3  | test("Locator", async ({page})=> {
+  4  | 
+  5  | await page.goto("https://www.google.com/");
+  6  | await expect(page).toHaveURL("https://www.google.com/")
+  7  | await expect(page).toHaveTitle("Google");
+  8  | const GoogleSearch = page.locator("//textarea[@class='gLFyf']")   //find and store a locator in a variable
+  9  | await GoogleSearch.fill("orangehrm");
+  10 | //print filled text ----> just for reference
+  11 | const SearchPrint = await GoogleSearch.inputValue();
+  12 | console.log(SearchPrint);
+  13 | 
+  14 | //click GoogleSearch Button
+  15 | await page.locator("//input[@value='Google Search']").first().click()
+  16 | 
+  17 | })
+  18 | 
+  19 | 
+  20 | 
+  21 | //using OrangeHRM website
+  22 | test("LoginLogoutCheckOrangeHRM", async ({page})=>{
+  23 | 
+> 24 | await page.goto("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
+     |            ^ Error: page.goto: Test timeout of 30000ms exceeded.
+  25 | await expect(page).toHaveTitle("OrangeHRM");
+  26 | await expect(page).toHaveURL("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
+  27 | 
+  28 | //fill & click to login using userName & password
+  29 | 
+  30 | await page.locator("//input[@name='username']").fill("Admin");
+  31 | await page.locator("//input[@name='password']").fill("admin123");
+  32 | await page.locator("//button[@type='submit']").click();
+  33 | 
+  34 | //verify Home Page - OrangeHRM
+  35 | 
+  36 | const DashboardTitle = page.locator("//span[@class = 'oxd-topbar-header-breadcrumb']");
+  37 | await expect(DashboardTitle).toBeVisible();
+  38 | console.log(await DashboardTitle.innerText());   // used to Print the UI text
+  39 | 
+  40 | //check Logout OrangeHRM and Verify Back to Login Page
+  41 | 
+  42 | await page.locator("//span[@class='oxd-userdropdown-tab']").click()
+  43 | await page.locator("(//a[@class='oxd-userdropdown-link'])[4]").click()
+  44 | 
+  45 | await expect(page).toHaveTitle("OrangeHRM");
+  46 | await expect(page).toHaveURL("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
+  47 | })
+  48 | 
+  49 | 
+  50 | 
+  51 | //Negative scenario ----> input correct userName and incorrect password
+  52 | 
+  53 | test("incorrectCredential", async ({page})=>{
+  54 | 
+  55 | await page.goto("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
+  56 | await expect(page).toHaveTitle("OrangeHRM");
+  57 | await expect(page).toHaveURL("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
+  58 | 
+  59 | //fill & click to login using userName & password
+  60 | 
+  61 | await page.locator("//input[@name='username']").fill("Admin");
+  62 | await page.locator("//input[@name='password']").fill("Deva321");  //------> Incorrect Password
+  63 | await page.locator("//button[@type='submit']").click();
+  64 | 
+  65 | // Locate error message
+  66 | const errorMsg = page.locator("//p[text()='Invalid credentials']")
+  67 | // Print error message
+  68 | console.log('Error Message:', await errorMsg.textContent());  //-------> used to print error msg text
+  69 | 
+  70 | // Validate error message
+  71 | await expect(errorMsg).toBeVisible();
+  72 | await expect(errorMsg).toHaveText('Invalid credentials');
+  73 | 
+  74 | })
+  75 | 
+  76 | 
+```

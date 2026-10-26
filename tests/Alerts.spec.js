@@ -5,7 +5,7 @@ import {test} from '@playwright/test'
 
 //Simple Alert ----> only OK button in the Alert
 
-test ('SimpleAlert', async ({page}) => {
+test ('Simple Alert', async ({page}) => {
 
 await page.goto ("https://demo.automationtesting.in/Alerts.html");
 
